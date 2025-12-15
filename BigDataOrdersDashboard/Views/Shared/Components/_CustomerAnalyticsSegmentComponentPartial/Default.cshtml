@@ -1,0 +1,9 @@
+﻿<div class="row clearfix">
+    <div class="col-lg-8 col-md-12">
+        @await Component.InvokeAsync("_CustomerAnalyticsCategoryOnChartSegmentComponentPartial")        
+        
+        @await Component.InvokeAsync("_CustomerAnalyticsStatisticsComponentPartial")
+    </div>
+    @await Component.InvokeAsync("_CustomerAnalyticsCustomerCityComponentPartial")
+    
+</div>

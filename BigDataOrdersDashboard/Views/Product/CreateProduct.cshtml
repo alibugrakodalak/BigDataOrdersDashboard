@@ -1,0 +1,62 @@
+﻿@model Product
+
+@{
+    ViewData["Title"] = "CreateProduct";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-7 col-md-6 col-sm-12">
+                        <h2 style="white-space: nowrap;">Yeni Ürün Ekleme</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="body">
+
+                        <form method="post">
+                            <label>Ürün Adı</label>
+                            <input type="text" asp-for="ProductName" class="form-control" />
+                            <br />
+                            <label>Ürün Açıklaması</label>
+                            <input type="text" asp-for="ProductDescription" class="form-control" />
+                            <br />
+                            <label>Birim Fiyatı / €</label>
+                            <input type="text" asp-for="UnitPrice" class="form-control" />
+                            <br />
+                            <label>Stok</label>
+                            <input type="text" asp-for="StockQuantity" class="form-control" />
+                            <br />
+                            <label>Kategori</label>
+                            <div class="form-line">
+                                <select asp-for="CategoryId" asp-items="ViewBag.CategoryList" class="form-control show-tick">
+                                    <option>-- Kategori Seçiniz --</option>
+                                </select>
+                            </div>
+                            <br />
+                            <label>Menşei Ülke</label>
+                            <input type="text" asp-for="CountryOfOrigin" class="form-control" />
+                            <br />
+                            <label>Ürün Görseli <i>(Url Olarak Giriniz)</i></label>
+                            <input type="text" asp-for="ProductImageUrl" class="form-control" />
+                            <br />
+
+                            <button class="btn btn-info">Ürün Oluştur</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

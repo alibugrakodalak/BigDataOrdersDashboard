@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+ 
+<section class="content">
+
+    @await Component.InvokeAsync("_DashboardBlockHeaderComponentPartial")    
+
+    <div class="container-fluid">
+
+        @await Component.InvokeAsync("_DashboardFirstChartComponentPartial")
+        <br/>
+        
+        <div class="row clearfix">
+            
+            @await Component.InvokeAsync("_DashboardMainChartComponentPartial")
+
+            @await Component.InvokeAsync("_DashboardKpiComponentPartial")
+            
+        </div>
+
+            @await Component.InvokeAsync("_DashboardTodayOrdersComponentPartial")            
+        
+        @await Component.InvokeAsync("_DashboardMapComponentPartial")
+        <br/>
+
+        <div class="row clearfix">
+
+            @await Component.InvokeAsync("_DashboardSubStatisticsComponentPartial")
+
+        </div>
+
+        <div class="row clearfix">
+            @await Component.InvokeAsync("_DashboardLastReviewsComponentPartial")
+            
+            @await Component.InvokeAsync("_DashboardActivitiesComponentPartial")
+            
+            @await Component.InvokeAsync("_DashboardCountryStatisticsComponentPartial")            
+        </div>
+       
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="body">
+                        <p class="m-b-0">© Created By <b><i>Ali Buğra Kodalak</i></b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+

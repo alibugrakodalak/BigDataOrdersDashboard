@@ -1,0 +1,19 @@
+﻿@model Customer
+
+<div class="profile-header">
+    <div class="profile_info row">
+        <div class="col-lg-3 col-md-4 col-12">
+            <div class="profile-image float-md-right"> <img src="@Model.CustomerImageUrl" alt=""> </div>
+        </div>
+        <div class="col-lg-6 col-md-8 col-12">
+            <h4 class="m-t-5 m-b-0"><strong>@Model.CustomerName</strong> @Model.CustomerSurname</h4>
+            <span class="job_post">@Model.CustomerEmail</span>
+            <p>@Model.CustomerDescription</p>
+            <p class="social-icon m-t-20 m-b-0">
+                <a title="https://instagram.com/" href="https://instagram.com/"><i class="zmdi zmdi-instagram "></i></a>
+                <a title="https://x.com/" href="https://x.com/"><i class="zmdi zmdi-twitter"></i></a>
+                <a title="https://youtube.com/" href="https://youtube.com/"><i class="zmdi zmdi-youtube"></i></a>
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,232 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>İstatistikler</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row clearfix">
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-seagreen text-center" style="border-radius:15px; background:linear-gradient(135deg, #8ee7d0, #7ae2b5); box-shadow:0 3px 12px rgba(0,0,0,0.15);">
+                <div class="body d-flex flex-column justify-content-center align-items-center" style="height:180px;">
+
+                    <div class="icon mb-3">
+                        <i class="zmdi zmdi-mall" style="font-size:56px; color:rgba(255,255,255,0.9);"></i>
+                    </div>
+
+                    <div class="content">
+                        <div class="text" style="color:rgba(255,255,255,0.9); font-size:16px; letter-spacing:1px;">Ürün Sayısı</div>
+                        <div class="number" style="color:#fff; font-size:28px; font-weight:700;">@ViewBag.ProductCount</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-turquoise text-center" style="border-radius:15px; background:linear-gradient(135deg, #8ee7d0, #7ae2b5); box-shadow:0 3px 12px rgba(0,0,0,0.15);">
+                <div class="body d-flex flex-column justify-content-center align-items-center" style="height:180px;">
+
+                    <div class="icon mb-3">
+                        <i class="zmdi zmdi-chart" style="font-size:56px; color:rgba(255,255,255,0.9);"></i>
+                    </div>
+
+                    <div class="content">
+                        <div class="text" style="color:rgba(255,255,255,0.9); font-size:16px; letter-spacing:1px;">Mevcut Stok Sayısı</div>
+                        <div class="number" style="color:#fff; font-size:28px; font-weight:700;">@ViewBag.TotalStock</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-blue text-center" style="border-radius:15px; background:linear-gradient(135deg, #8ee7d0, #7ae2b5); box-shadow:0 3px 12px rgba(0,0,0,0.15);">
+                <div class="body d-flex flex-column justify-content-center align-items-center" style="height:180px;">
+
+                    <div class="icon mb-3">
+                        <i class="zmdi zmdi-account" style="font-size:56px; color:rgba(255,255,255,0.9);"></i>
+                    </div>
+
+                    <div class="content">
+                        <div class="text" style="color:rgba(255,255,255,0.9); font-size:16px; letter-spacing:1px;">Mevcut Müşteri</div>
+                        <div class="number" style="color:#fff; font-size:28px; font-weight:700;">@ViewBag.CustomerCount</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-slategray text-center" style="border-radius:15px; background:linear-gradient(135deg, #8ee7d0, #7ae2b5); box-shadow:0 3px 12px rgba(0,0,0,0.15);">
+                <div class="body d-flex flex-column justify-content-center align-items-center" style="height:180px;">
+
+                    <div class="icon mb-3">
+                        <i class="zmdi zmdi-chart" style="font-size:56px; color:rgba(255,255,255,0.9);"></i>
+                    </div>
+
+                    <div class="content">
+                        <div class="text" style="color:rgba(255,255,255,0.9); font-size:16px; letter-spacing:1px;">Ciro</div>
+                        <div class="number" style="color:#fff; font-size:28px; font-weight:700;">@ViewBag.TotalOrderAmount</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row clearfix">
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-coral text-center" style="border-radius:15px; background:linear-gradient(135deg, #8ee7d0, #7ae2b5); box-shadow:0 3px 12px rgba(0,0,0,0.15);">
+                <div class="body d-flex flex-column justify-content-center align-items-center" style="height:180px;">
+
+                    <div class="icon mb-3">
+                        <i class="zmdi zmdi-assignment-check" style="font-size:56px; color:rgba(255,255,255,0.9);"></i>
+                    </div>
+
+                    <div class="content">
+                        <div class="text" style="color:rgba(255,255,255,0.9); font-size:16px; letter-spacing:1px;">Alınan Toplam Sipariş</div>
+                        <div class="number" style="color:#fff; font-size:28px; font-weight:700;">@ViewBag.OrderCount</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-green text-center" style="border-radius:15px; background:linear-gradient(135deg, #8ee7d0, #7ae2b5); box-shadow:0 3px 12px rgba(0,0,0,0.15);">
+                <div class="body d-flex flex-column justify-content-center align-items-center" style="height:180px;">
+
+                    <div class="icon mb-3">
+                        <i class="zmdi zmdi-check-all" style="font-size:56px; color:rgba(255,255,255,0.9);"></i>
+                    </div>
+
+                    <div class="content">
+                        <div class="text" style="color:rgba(255,255,255,0.9); font-size:16px; letter-spacing:1px;">Tamamlanan Sipariş</div>
+                        <div class="number" style="color:#fff; font-size:28px; font-weight:700;">@ViewBag.OrderStatusByCompleted</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-social text-center" style="border-radius:15px; background:linear-gradient(135deg, #8ee7d0, #7ae2b5); box-shadow:0 3px 12px rgba(0,0,0,0.15);">
+                <div class="body d-flex flex-column justify-content-center align-items-center" style="height:180px;">
+
+                    <div class="icon mb-3">
+                        <i class="zmdi zmdi-hourglass-alt" style="font-size:56px; color:rgba(255,255,255,0.9);"></i>
+                    </div>
+
+                    <div class="content">
+                        <div class="text" style="color:rgba(255,255,255,0.9); font-size:16px; letter-spacing:1px;">Bekleyen Sipariş</div>
+                        <div class="number" style="color:#fff; font-size:28px; font-weight:700;">@ViewBag.OrderStatusByWaiting</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-pink text-center" style="border-radius:15px; background:linear-gradient(135deg, #8ee7d0, #7ae2b5); box-shadow:0 3px 12px rgba(0,0,0,0.15);">
+                <div class="body d-flex flex-column justify-content-center align-items-center" style="height:180px;">
+
+                    <div class="icon mb-3">
+                        <i class="zmdi zmdi-chart" style="font-size:56px; color:rgba(255,255,255,0.9);"></i>
+                    </div>
+
+                    <div class="content">
+                        <div class="text" style="color:rgba(255,255,255,0.9); font-size:16px; letter-spacing:1px;">Son 1 Yıl İçerisinde Alınan Sipariş</div>
+                        <div class="number" style="color:#fff; font-size:28px; font-weight:700;">@ViewBag.Orders2025Count</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>   
+        
+
+    <div class="row clearfix">
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-blush text-center" style="border-radius:15px; background:linear-gradient(135deg, #8ee7d0, #7ae2b5); box-shadow:0 3px 12px rgba(0,0,0,0.15);">
+                <div class="body d-flex flex-column justify-content-center align-items-center" style="height:180px;">
+
+                    <div class="icon mb-3">
+                        <i class="zmdi zmdi-flag" style="font-size:56px; color:rgba(255,255,255,0.9);"></i>
+                    </div>
+
+                    <div class="content">
+                        <div class="text" style="color:rgba(255,255,255,0.9); font-size:16px; letter-spacing:1px;">Ülke</div>
+                        <div class="number" style="color:#fff; font-size:28px; font-weight:700;">@ViewBag.CustomersCountry</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-salmon text-center" style="border-radius:15px; background:linear-gradient(135deg, #8ee7d0, #7ae2b5); box-shadow:0 3px 12px rgba(0,0,0,0.15);">
+                <div class="body d-flex flex-column justify-content-center align-items-center" style="height:180px;">
+
+                    <div class="icon mb-3">
+                        <i class="zmdi zmdi-city" style="font-size:56px; color:rgba(255,255,255,0.9);"></i>
+                    </div>
+
+                    <div class="content">
+                        <div class="text" style="color:rgba(255,255,255,0.9); font-size:16px; letter-spacing:1px;">Şehir</div>
+                        <div class="number" style="color:#fff; font-size:28px; font-weight:700;">@ViewBag.CustomersCity</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-parpl text-center" style="border-radius:15px; background:linear-gradient(135deg, #8ee7d0, #7ae2b5); box-shadow:0 3px 12px rgba(0,0,0,0.15);">
+                <div class="body d-flex flex-column justify-content-center align-items-center" style="height:180px;">
+
+                    <div class="icon mb-3">
+                        <i class="zmdi zmdi-view-module" style="font-size:56px; color:rgba(255,255,255,0.9);"></i>
+                    </div>
+
+                    <div class="content">
+                        <div class="text" style="color:rgba(255,255,255,0.9); font-size:16px; letter-spacing:1px;">En Çok Satış Yapılan Ülke</div>
+                        <div class="number" style="color:#fff; font-size:28px; font-weight:700;">@ViewBag.BestCountry</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card info-box-2 l-khaki text-center" style="border-radius:15px; background:linear-gradient(135deg, #8ee7d0, #7ae2b5); box-shadow:0 3px 12px rgba(0,0,0,0.15);">
+                <div class="body d-flex flex-column justify-content-center align-items-center" style="height:180px;">
+
+                    <div class="icon mb-3">
+                        <i class="zmdi zmdi-chart" style="font-size:56px; color:rgba(255,255,255,0.9);"></i>
+                    </div>
+
+                    <div class="content">
+                        <div class="text" style="color:rgba(255,255,255,0.9); font-size:16px; letter-spacing:1px;">Kasım Ayı Siparişleri</div>
+                        <div class="number" style="color:#fff; font-size:28px; font-weight:700;">@ViewBag.NovemberOrders</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+

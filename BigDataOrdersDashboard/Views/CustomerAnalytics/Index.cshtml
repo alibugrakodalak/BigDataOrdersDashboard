@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content">
+
+    @await Component.InvokeAsync("_CustomerAnalyticsBlogHeaderComponentPartial")
+
+    <div class="container-fluid">
+
+            @await Component.InvokeAsync("_CustomerAnalyticsMainStatisticsComponentPartial")
+
+        @await Component.InvokeAsync("_CustomerAnalyticsSegmentComponentPartial")
+    </div>
+</section>
+
+
+
+
+

@@ -1,0 +1,55 @@
+﻿@model List<OrderSummaryViewModel>
+
+<div class="row clearfix">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+            <div class="header">
+                <h2>Günün Siparişleri <small>Bugün Alınan Son 5 Sipariş</small> </h2>
+            </div>
+            <div class="body table-responsive members_profiles">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Müşteri</th>
+                            <th>Ürün</th>
+                            <th>Miktar</th>
+                            <th>Birim Fiyat / €</th>
+                            <th>Toplam Tutar / €</th>
+                            <th>Ödeme Yöntemi</th>
+                            <th>Sipariş Durumu</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.CustomerName</td>
+                                <td>@item.ProductName</td>
+                                <td>@item.Quantity</td>
+                                <td>@item.UnitPrice</td>
+                                <td>@(item.Quantity * item.UnitPrice) €</td>
+                                <td>@item.PaymentMethod</td>
+                                <td> 
+                                    <span style="display:inline-block; background-color:@(
+                                            item.OrderStatus == "Tamamlandı" ? "#28a745" :
+                                            item.OrderStatus == "Kargoda" ? "#007bff" :
+                                            item.OrderStatus == "Hazırlanıyor" ? "#fd7e14" :
+                                            item.OrderStatus == "Beklemede" ? "#ffc107" :
+                                            item.OrderStatus == "İptal Edildi" ? "#cc081b" : "cc081b"
+                                        );
+                                        color:white;
+                                        font-weight:bold;
+                                        padding:3px 10px;
+                                        border-radius:6px;
+                                        white-space:nowrap;">@item.OrderStatus
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

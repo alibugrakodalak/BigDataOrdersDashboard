@@ -1,0 +1,48 @@
+﻿<div class="card">
+    <div class="header">
+        <h2>En Popüler Kategoriler</h2>
+    </div>
+    <div class="body">
+        <div class="row">
+            <div class="col-sm-4 col-4 m-b-10">
+                <span class="text-muted">@ViewBag.TopCategories1Name</span>
+                <h5 class="m-b-0">@ViewBag.TopCategories1Count</h5>
+            </div>
+            <div class="col-sm-4 col-4 m-b-10">
+                <span class="text-muted">@ViewBag.TopCategories2Name</span>
+                <h5 class="m-b-0">@ViewBag.TopCategories2Count</h5>
+            </div>
+            <div class="col-sm-4 col-4 m-b-10">
+                <span class="text-muted">@ViewBag.TopCategories3Name</span>
+                <h5 class="m-b-0">@ViewBag.TopCategories3Count</h5>
+            </div>
+        </div>
+
+        <div id="categoryChart"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script>
+    var options = {
+        chart: {
+            type: 'line',
+            height: 350
+        },
+        stroke: {
+            width: 3,
+            curve: 'smooth'
+        },
+        series: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.Series)),
+        xaxis: {
+            categories: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.Years))
+            },
+        tooltip: {
+            shared: true,
+            intersect: false
+        }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#categoryChart"), options);
+    chart.render();
+</script>
